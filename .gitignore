@@ -1,0 +1,133 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.pyo
+*.pyc
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+.DS_Store
+*.cover
+*.coverage
+.coverage.*
+*.mo
+*.pyo
+*.swo
+*.swp
+
+# Environment Variables
+.env
+*.env
+
+# Django static files
+static/
+staticfiles/
+
+# Django media files
+media/
+
+# Virtual Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+.history/
+.code-workspace
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Vim
+*.swp
+.swp
+.swo
+*.swo
+
+# MacOS
+.DS_Store
+Thumbs.db
+
+# MySQL
+*.sql
+*.sqlite3
+
+# Logs
+*.log
