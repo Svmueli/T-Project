@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Instructor Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Instructor Dashboard</h1>
+    <h2>Your Classes</h2>
+    <ul>
+        {% for classroom in classrooms %}
+            <li><a href="{% url 'classroom_detail' classroom.id %}">{{ classroom.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_classroom' %}" class="btn btn-primary">Create New Classroom</a>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Student Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Student Dashboard</h1>
+    <h2>Your Classes</h2>
+    <ul>
+        {% for classroom in classrooms %}
+            <li><a href="{% url 'classroom_detail' classroom.id %}">{{ classroom.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

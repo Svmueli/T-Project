@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inbox{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Inbox</h1>
+    <ul>
+        {% for message in messages %}
+            <li>{{ message.sender.username }}: {{ message.text }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

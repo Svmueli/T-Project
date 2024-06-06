@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Quiz Detail{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ quiz.title }}</h1>
+    <ul>
+        {% for question in quiz.questions.all %}
+            <li>{{ question.text }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

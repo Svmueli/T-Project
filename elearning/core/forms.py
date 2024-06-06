@@ -1,32 +1,56 @@
 from django import forms
-from .models import Classroom, Assignment, Quiz, Question, Choice, Submission
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from .models import Classroom, Assignment, Quiz, Announcement, Comment, UserProfile, Message, AssignmentSubmission, Profile
+
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['role', 'profile_picture']
 
 class ClassroomForm(forms.ModelForm):
     class Meta:
         model = Classroom
-        fields = ['name']
+        fields = ['name', 'code', 'description']
 
 class AssignmentForm(forms.ModelForm):
     class Meta:
         model = Assignment
-        fields = ['title', 'description', 'file', 'due_date']
+        fields = ['title', 'description', 'due_date', 'file']
 
 class QuizForm(forms.ModelForm):
     class Meta:
         model = Quiz
-        fields = ['title']
+        fields = ['title', 'description', 'due_date']
 
-class QuestionForm(forms.ModelForm):
+class AnnouncementForm(forms.ModelForm):
     class Meta:
-        model = Question
-        fields = ['question_text']
+        model = Announcement
+        fields = ['title', 'content']
 
-class ChoiceForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Choice
-        fields = ['choice_text', 'is_correct']
+        model = Comment
+        fields = ['content']
 
-class SubmissionForm(forms.ModelForm):
+class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = Submission
+        model = UserProfile
+        fields = ['bio', 'profile_picture']
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ['recipient', 'content']
+
+class AssignmentSubmissionForm(forms.ModelForm):
+    class Meta:
+        model = AssignmentSubmission
         fields = ['file']
